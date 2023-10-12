@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}INFOMARKET{% endblock %}
+
+{% block cabecera %}{% endblock %}
+
+{% block contenido %}
+
+<ul> 
+    <img width="100%"; height="150px" src="{% static 'img/portada.jpeg' %}" alt="">
+</ul>
+
+        <button>TIENDA</button>
+        
+    <div>
+    <section class="galeria">
+    
+        <img src="{% static 'img/mouse.jpg' %}" alt="" title="mouse">
+        <img src="{% static 'img/teclado.jpg' %}" alt="" title="Teclados">
+        <img src="{% static 'img/impresora1.jpg' %}" alt="" title="Impresoras">
+        <img src="{% static 'img/consolas.jpg' %}" alt="" title="Consolas">
+        <img src="{% static 'img/notebook.jpg' %}" alt="" title="Notebooks">
+        <img src="{% static 'img/graficas.png' %}" alt="" title="Graficas">
+        <img src="{% static 'img/audio.jfif' %}" alt="" title="Audio">
+        
+    </section> 
+    </div>
+ <footer>       
+    <p>Proyecto curso Bios &copy;Python</p>
+</footer>
+
+{% endblock %}

@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+#header {
+    background-color: rgb(23, 123, 150);  
+    color: rgb(252, 248, 248);
+    padding: 15px; 
+    padding-left: 11%;
+    margin:-1%;
+    width: 102%; 
+    height: 40px;
+  
+}
+
+body {
+    overflow-x: hidden;
+    font-family:Courier New, 'Courier', monospace ;
+}
+body div h4{
+    left: 10%;
+    padding: 180px;
+    font-size:large;
+
+}
+/*botnes: inicio, nosotros, contacto*/
+#menu ul{
+    margin:52px;
+}
+#menu ul li{
+    display:inline;
+}
+#menu ul li a{
+    font-family: fantasy;
+    color:#2a2a2f;
+    text-decoration:none;
+    padding: 10px;
+    float:none;
+   
+}
+#menu ul li a:hover{
+    border-radius: 5px;
+    background-color: rgb(93, 91, 91);
+    color:#128599
+    
+}
+/*foto de teclado en index*/
+section{
+    clear: both;
+    padding-top: 10px;
+    width: 114%;
+    margin:-3%;
+   
+} 
+   
+footer{
+    margin-top:150px;
+    font-size: small;
+    text-align:center;  
+    background-color:#0d0c0c;
+    color:rgb(9, 98, 108);
+    
+}
+div{
+    display:flex;
+    align-items:center;
+    justify-content:left; 
+    font-size:x-large;
+    margin:50px;
+}    
+div h2{
+    background: linear-gradient(to right, rgb(55, 55, 57) 35%, #128599 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#buscar {
+    position:relative;
+    top: -198px !important;
+    left: 30%;
+    display:block;
+    gap: 4px;
+    justify-content: center;
+    padding: 4px;
+    
+}        
+
+#buscar input[type="text"] {
+    padding: 6px;
+    border-radius: 3px;
+    border: 2px solid #332f2f;
+    width: 550px;
+    top:20%;
+}
+
+#buscar input[type="submit"] {
+    padding: 6px 8px;
+    border-radius: 3px;
+    border:2px solid rgb(63, 63, 63);
+    background-color: #128599;
+    color: white;
+}
+
+.galeria{
+    display: flex;
+    padding:5%;
+    padding-left: 6%;
+    margin:10%;
+    width: 900px;
+    height: 330px;
+}
+.galeria img{
+    width: 0px;
+    flex-grow: 4;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5 ease;
+}
+.galeria img:hover {
+    cursor: crosshair;
+    width: 100px;
+    height: 400px;
+    opacity: 1;
+    filter: contraste(120%);
+}
+
+.galeria img {
+    position:relative;
+}

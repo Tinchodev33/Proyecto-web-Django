@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="menu.css" />
+    <link rel="shortcut icon" href="{% static 'img/minilogo.png' %}">
+
+    <link href="{% static '/css/base.css' %}" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+<body>    
+    <div id="header">
+        <h4>Contamos con todas las soluciones informaticas para la oficina y el hogar.</h4>
+    </div>
+
+    <header>
+        <h1>{% block cabecera %}{% endblock %}</h1>
+        <div class="logo.png">
+            <img width="6%" src="{% static 'img/minilogo.png' %}" alt="logo">
+            <h2>INFOMARKET</h2>
+        </div>
+    </header>
+        
+    <nav id="menu">
+        <ul>
+            <li><a href="{% url 'Home' %}">Inicio</a></li>
+            <li><a href="{% url 'Nosotros' %}">Nosotros</a></li>
+            <li><a href="{% url 'contacto' %}">Contacto</a></li>
+        </ul>
+        <form id="buscar" method="get" action="/buscar">
+            <input type="text" name="buscar">
+            <input type="submit" value="Buscar">
+        </form>
+    </nav>
+        
+    <section>
+        {% block contenido %}
+        
+        {% endblock %}    
+    </section>
+   
+</body>
+</html>

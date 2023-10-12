@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Resultados{% endblock %}
+
+{% block cabecera %}{% endblock %}
+
+{% block contenido %}
+
+    {% for producto in productos %}
+
+        <div class="producto">
+            <img width="20%" src="{{ producto.imagen.url }}" alt="Imagen del producto">
+            <ul id="descripcion-{{producto.id}}">
+                <li><strong>Nombre:</strong> {{producto.nombre}}</li>
+                <li><strong>Marca:</strong> {{producto.marca}}</li>
+                <li><strong>Precio:</strong> US$ {{producto.precio}}</li>
+                <li id="descripcion-li-{{producto.id}}" style="display:none;">
+                <strong>Descripcion:</strong> {{producto.descripcion}}</li>
+            </ul>
+            <button data-id="{{producto.id}}" onclick="mostrarDescripcion(this)">Descripcion</button>
+        </div>
+
+        <script>
+            function mostrarDescripcion(button) {
+              var id = button.getAttribute('data-id');
+              var li = document.getElementById('descripcion-li-' + id);
+              if(li.style.display==='none'){
+                li.style.display='block';
+              }
+              else{
+                li.style.display='none';
+              }
+            }
+        </script>
+
+        {% empty %}
+        <style>
+            .resul {
+                margin:15%
+            }
+        </style>
+        <h3 class="resul">Sin Resultados</h3>
+        
+    {% endfor %}
+<style>
+    .producto {
+        border: 3px solid #767272;
+        margin: 15px;
+        padding: 20px;
+        width: 75%;
+        margin-left: 8%;
+    }
+    .producto img {
+        display:list-item;
+        margin-bottom: 5%;
+        margin-right: 30%;
+        margin-top: 10px;
+    }
+    .producto ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .producto button{
+        margin-bottom: 2px;
+        display: block;
+        margin-top: 100px;
+    }
+    footer{
+        margin-top: 150px;
+        font-size: small;
+        text-align: center;
+        background-color:#0d0c0c;
+        color:rgb(208, 205, 205);
+    }
+</style>
+
+<footer>
+<p>Proyecto curso Bios &copy;Python</p>
+</footer>
+{% endblock %}

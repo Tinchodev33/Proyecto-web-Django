@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static%}
+
+{% block titulo %}INFOMARKET-Tienda Informatica{% endblock %}
+
+{% block cabecera %}{% endblock %}
+
+{% block contenido %}
+<style>
+    .mi-imagen {
+        display: flex;
+        width: 40%;
+        border: 3px solid rgb(77, 74, 74);
+        border-radius: 15px;
+        box-shadow: 30px 15px 15px rgba(25, 58, 118, 0.5);
+        margin-left: 35%;
+        margin-top:5%;
+    }
+    h2.dos {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #393535;
+        font-size: 2em;
+        margin: 5%;
+    }
+    h3 {
+        color: #10134a;
+        font-size: 1.5em;
+        margin-left:5%;
+    }
+    p {
+        color: #454444;
+        font-size: 1em;
+        line-height: 1.3;
+        margin-left:5%;
+        margin-right: 15%;
+    }
+</style>
+<img class="mi-imagen" src="{% static 'img/local.jpg' %}" alt="">
+
+<h2 class="dos">NOSOTROS</h2>
+
+<h3>¿Quienes somos?</h3>
+
+<p>Somos una empresa dedicada a la importación y comercialización de productos tecnológicos. Acercamos a todos los uruguayos productos líderes en innovación y desarrollo que impactan en su comodidad y calidad de vida. Nuestra dirección técnica está integrada por ingenieros en sistemas,
+     lo cual garantiza el expertise dentro del área en que operamos. </p>
+
+<h3>Mision</h3>
+
+<p>Poner al alcance de todos los Uruguayos productos de
+     innovación y desarrollo tecnológico que maximicen su comodidad y calidad de vida. </p>
+
+<h3>Nuestros principios</h3>
+
+<p>Nos esforzamos en lograr la excelencia en cada una de las tareas que realizamos, 
+    siempre en equipo. Trabajamos con honestidad y sinceridad y siempre priorizamos 
+    la satisfacción garantizada sin excepciones a nuestros clientes. ¡Gracias por elegirnos! :)</p>
+
+
+<style>
+
+    footer p{
+    margin-top: 150px;
+    font-size: small;
+    text-align: center;
+    background-color:#0d0c0c;
+    color:rgb(9, 98, 108);
+    
+}
+</style>
+
+
+<footer>
+    <p>Proyecto curso Bios &copy;Python</p>
+</footer>
+
+{% endblock %}
