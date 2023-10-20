@@ -7,8 +7,9 @@ from django.urls import reverse
 # Create your views here.
 
 
-def menu_button(request):
-    return HttpResponseRedirect(reverse('nombre_de_tu_url'))
+def ver(request):
+    productos = Producto.objects.all()  
+    return render(request, 'ver.html', {'productos': productos})
 
 
 def index(request):
@@ -44,4 +45,4 @@ def busqueda(request):
         return render(request, 'resultados.html', {'productos': productos})
     else:
         return render(request, 'resultados.html')
-    
+ 

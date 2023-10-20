@@ -7,13 +7,19 @@
 
 {% block contenido %}
 
+
+
+
 <ul> 
     <img width="100%"; height="150px" src="{% static 'img/portada.jpeg' %}" alt="">
 </ul>
 
-        <button>TIENDA</button>
-        
     <div>
+
+        <button class="verbtn" onclick="location.href='{% url 'ver' %}'" type="button">
+           <span>Ver Tienda</span>
+        </button>
+        
     <section class="galeria">
     
         <img src="{% static 'img/mouse.jpg' %}" alt="" title="mouse">

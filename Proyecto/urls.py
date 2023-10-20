@@ -25,6 +25,6 @@ urlpatterns = [
     path('somos/', somos, name='Nosotros'),
     path('buscar/', busqueda, name='buscar'), 
     path('contacto/',contacto, name= 'contacto'),
-    path('menu/', menu_button, name='menu-btn'),
+    path('ver/', ver, name='ver'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

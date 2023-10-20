@@ -32,10 +32,10 @@ class Producto(models.Model):
         return '%s %s' % (self.nombre, self.tipo)
  
 opciones_consultas = [
-     [0, 'consulta'],
-     [1, 'reclamo'],
-     [2, 'sugerencia'],
-     [3, 'felicitaciones']
+     [0, 'Consulta'],
+     [1, 'Reclamo'],
+     [2, 'Envios'],
+     [3, 'Calificación']
 ]
  
 class Contacto(models.Model):

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titulo %}{% endblock %}
+
+{% block cabecera %}{% endblock %}
+
+{% block contenido %}
+    <style>
+        
+        .ver{
+            padding-top: -10%;
+            border: 3px solid #767272;
+            margin-right: 10%;
+            margin-top: 1%;
+            list-style-type: none;
+        }
+
+         .ver h3{
+            margin-top: -10%;
+            margin: 60px;
+        }
+
+        .ver h4{
+            margin-top: 0%;
+            color: cornflowerblue;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .ver img {
+            max-width: 250px;
+            max-height: 180px;
+            margin-right: 30%;
+            margin-top: 5%;
+            list-style-type: none;
+        }
+       
+        p {  
+            text-align: center;
+            padding: 3%;
+            font-size: x-large;
+            color: #128599;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+        }     
+
+    </style>
+
+<p>Lista de Productos</p>
+
+{% for producto in productos %}
+
+<div class="ver">
+    <h3>{{ producto.nombre }}</h3>  
+    <h4>{{ producto.marca }}</h4>  
+    <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
+    
+</div>
+
+{% endfor %} 
+
+
+
+
+ {% endblock %}
