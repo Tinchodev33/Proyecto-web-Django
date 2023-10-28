@@ -39,7 +39,7 @@ section{
 footer{
     margin-top:150px;
     font-size: small;
-    text-align:center;  
+    text-align: center;  
     background-color:#0d0c0c;
     color:#128599;
     
@@ -130,9 +130,9 @@ div h2{
     
 }
 .h2index{
+    text-align: center;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:rgb(80, 80, 80);
     padding: 5%;
-    text-align: center;
     text-shadow: 4px 2px 5px #128599
 }

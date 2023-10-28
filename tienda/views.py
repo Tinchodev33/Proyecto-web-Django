@@ -6,6 +6,7 @@ from django.urls import reverse
 
 # Create your views here.
 
+ 
 
 def ver(request):
     productos = Producto.objects.all()  

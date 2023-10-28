@@ -26,6 +26,20 @@
             <li><a href="{% url 'Home' %}">Inicio</a></li>
             <li><a href="{% url 'Nosotros' %}">Nosotros</a></li>
             <li><a href="{% url 'contacto' %}">Contacto</a></li>
+
+            {% if user.is_authenticated %}
+            <li>
+                <a href="{% url 'logout' %}">Cerrar cesion</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="{% url 'login' %}">Iniciar sesion</a>
+            </li>
+            
+            <li>
+                <a href="{% url 'registro' %}">Registrarme</a>
+            </li>
+            {% endif %}
         </ul>
         <form id="buscar" method="get" action="/buscar">
             <input type="text" name="buscar">
